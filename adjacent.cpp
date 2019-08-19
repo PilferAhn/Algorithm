@@ -1,4 +1,5 @@
 // 인접행렬 구하기 
+// 인접리스트 구현하기 나중에 찾아보기 
 #include <iostream>
 using namespace std;
 
