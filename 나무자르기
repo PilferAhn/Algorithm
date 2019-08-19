@@ -1,0 +1,39 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+long long int n, h;
+void Psearch(long long int* arr, long long int start, long long int end, long long int height){
+  
+  if(start>= end){
+    return;
+  }
+  
+  long long int sum = 0;
+  long long int mid = (start + end) / 2;
+  
+  for(int i=0;i<n;i++){
+    sum = sum + arr[i] - mid;
+  }
+  
+  if(sum == hei9ght) printf("%d", mid);
+  else if(sum > height) Psearch(arr, start, mid - 1, height);
+  else Psearch(arr, mid + 1 , end, height);
+  
+}
+
+int main(){
+  
+  
+  
+  cin >> n >> h;
+  
+  long long int arr[n];
+  
+  for(int i = 0;i<n;i++) scanf("%lld",&arr[i]);
+  
+  sort(arr,arr+n);
+  
+  Psearch(arr, 0, n-1, h);
+  
+  return 0;
+}
