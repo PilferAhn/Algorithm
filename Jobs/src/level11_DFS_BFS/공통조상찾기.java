@@ -1,4 +1,4 @@
-package level11;
+package level11_DFS_BFS;
 
 import java.util.Scanner;
 
