@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 //import java.util.Scanner;
 
-public class ê³µí†µì¡°ìƒì°¾ê¸° {
+public class SameAnsester {
 	static boolean[] check = new boolean[1001];
 	static int[] height = new int[1001];
 	static int[] parents = new int[1001];
@@ -14,7 +14,7 @@ public class ê³µí†µì¡°ìƒì°¾ê¸° {
 		if(check[node] == false) {
 			check[node] = true;
 			
-			//ë…¸ë“œì˜ ë†’ì´ ì €ì¥. 
+			//?…¸?“œ?˜ ?†’?´ ???¥. 
 			height[node] =depth;
 			
 			for(int i = 0; i < 11; i++) {
@@ -52,7 +52,7 @@ public class ê³µí†µì¡°ìƒì°¾ê¸° {
 		
 		if(height[left] > height[right]) {
 			
-			//ì™¼ìª½ì˜ ë…¸ë“œê°€ ë” ê¹Šì„ë•Œ 
+			//?™¼ìª½ì˜ ?…¸?“œê°? ?” ê¹Šì„?•Œ 
 			while(true) {
 				if(height[left] == height[right]) {
 					

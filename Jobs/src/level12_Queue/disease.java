@@ -1,6 +1,6 @@
 package level12_Queue;
 import java.util.*;
-public class 전염병 {
+public class disease {
 	static final int max = 100001;
 	static int cnt = 10;
 	
@@ -40,7 +40,7 @@ public class 전염병 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// bfs 문제다. 
+		// bfs 문제?��. 
 		
 		int vilige = 10;
 		int start = 3;

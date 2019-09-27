@@ -2,7 +2,7 @@ package level11_DFS_BFS;
 
 import java.util.Scanner;
 
-public class 노드의높이 {
+public class height {
 	static boolean[] check = new boolean[100];
 	static int max = 0;
 	static int answer = 0;

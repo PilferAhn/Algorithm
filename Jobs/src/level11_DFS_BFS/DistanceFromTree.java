@@ -2,7 +2,7 @@ package level11_DFS_BFS;
 
 import java.util.Scanner;
 
-public class 트리에서의거리 {
+public class DistanceFromTree {
 	static int answer = 0;
 	static boolean[] check = new boolean[1001];
 	static int numNode = 11;
