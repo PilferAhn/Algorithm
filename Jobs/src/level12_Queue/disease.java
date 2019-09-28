@@ -13,7 +13,7 @@ public class disease {
 		check[n] = true;
 		
 		while(!q.isEmpty()) {
-			
+			// testing.
 			cnt--;
 			int temp = q.peek();
 			q.remove();
@@ -40,7 +40,7 @@ public class disease {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		// bfs 문제?��. 
+		//이렇게도 움직이니 
 		
 		int vilige = 10;
 		int start = 3;

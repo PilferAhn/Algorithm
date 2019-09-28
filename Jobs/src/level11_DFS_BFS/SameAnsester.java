@@ -14,7 +14,7 @@ public class SameAnsester {
 		if(check[node] == false) {
 			check[node] = true;
 			
-			//?…¸?“œ?˜ ?†’?´ ???¥. 
+			
 			height[node] =depth;
 			
 			for(int i = 0; i < 11; i++) {
@@ -52,7 +52,7 @@ public class SameAnsester {
 		
 		if(height[left] > height[right]) {
 			
-			//?™¼ìª½ì˜ ?…¸?“œê°? ?” ê¹Šì„?•Œ 
+			//?ï¿½ï¿½ìª½ì˜ ?ï¿½ï¿½?ï¿½ï¿½ï¿½? ?ï¿½ï¿½ ê¹Šì„?ï¿½ï¿½ 
 			while(true) {
 				if(height[left] == height[right]) {
 					
