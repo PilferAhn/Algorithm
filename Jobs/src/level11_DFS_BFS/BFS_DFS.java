@@ -10,66 +10,76 @@ public class BFS_DFS {
 
 		// value
 		// 0 1 0 2 0 3 1 5 2 5 3 4 4 5 5 6 5 7 5 8 6 7 7 8
-		int[][] table = new int[8][8];
+//		int[][] table = new int[8][8];
 		
-		String[] temp = {"5D", "E8", "G2"};
+		String[] temp = {"5D", "8E", "2G"};
 		int x = 0;
 		int y = 0;
-		for(int i = 8; i > 0; i--) {
+		
+		for(int i = 7; i >= 0; i--) {
 			for(int j = 0; j < 8; j++){
-				table[i][j] = 1;
+				tree[i][j] = 5;
 			}
 		}
+		
+//		for(int i = 7; i >= 0; i--) {
+//			for(int j = 0; j < 8; j++){
+//				System.out.print(tree[i][j] + " ");
+//			}
+//			System.out.println();
+//		}
+		
 		for(String str : temp) {
 			y = str.charAt(0) - '0';
 			x = (str.charAt(1)) - '0';
 			x = x - 17;
 			y = y - 1;
 			
-			
+//			System.out.println(x + " " + y);
+		
 			int tempx = x;
 			int tempy = y;
-			table[y][x] = 0;
 			
-			while(x > 0 && y <= 7) {
-				x--;
-				y++;
-				table[y][x] = 0;
+			while(tempx >= 0 || tempy <= 7) {
+				tree[tempy][tempx] = 0;
+				tempy++;
+				tempx--;
 			}
 			
-			while(y > 0 && x <= 7) {
-				x++;
-				y--;
-				table[y][x] = 0;
+			tempx = x;
+			tempy= y;
+			
+			while(tempx <= 7 || tempy >= 0) {
+				tree[tempy][tempx] = 0;
+				tempx++;
+				tempy--;
 			}
 			
-			x = tempx;
-			y = tempy;
-			while(x < 7 && y < 7) {
-				x++;
-				y++;
-				table[y][x] = 0;
+			tempx = x;
+			tempy= y;
+			
+			while(tempx<=7 && tempy<=7) {
+				tree[tempy][tempx] = 0;
+				tempx++;
+				tempy++;
 			}
 			
-			x = tempx;
-			y = tempy;
-			while(x > 0 &&  y > 0) {
-				x--;
-				y--;
-				table[y][x] = 0;
+			while(tempx >= 0 && tempy >= 0) {
+				tree[tempy][tempx] = 0;
+				tempx--;
+				tempy--;
 			}
-			int answer = 0;
+			
 			for(int i = 7; i >= 0; i--) {
 				for(int j = 0; j < 8; j++){
-					System.out.print(table[i][j] + " ");
-					if(table[i][j] == 1) {
-						answer ++;
-					}
+					System.out.print(tree[i][j] + " ");
 				}
 				System.out.println();
 			}
 			
-//			System.out.print(answer);
+			System.out.println();
+			System.out.println();
+//			break;
 		}
 		
 		
