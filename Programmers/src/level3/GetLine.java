@@ -14,8 +14,7 @@ public class GetLine {
 		
 		
 //		System.out.print("Test");
-		if(arr.size() == 3) {
-			
+		if(arr.size() == 3) {	
 			cnt++;
 			if(cnt == k) for(int num : arr) System.out.print(num);
 			
