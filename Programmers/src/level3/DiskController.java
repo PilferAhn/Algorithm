@@ -9,7 +9,7 @@ public class DiskController {
 		// TODO Auto-generated method stub
 		int[][] jobs = {{0, 3}, {1, 9}, {2, 6}};
 		
-		ArrayList<Integer> time = new ArrayList<Integer>();
+		
         Queue <Integer> pq = new PriorityQueue<Integer>();
         int cnt = 0;
         
@@ -31,7 +31,7 @@ public class DiskController {
         do {
         	
         	if(cnt < jobs.length) {
-        		time.add(hash.get(cnt));
+//        		time.add(hash.get(cnt));
         		pq.add(hash.get(cnt++));
         	}
         	
@@ -44,7 +44,8 @@ public class DiskController {
         		total += current;
         		sum += total - out.get(second);
         		
-        		System.out.print(sum + " ");
+//        		System.out.print(sum + " ");
+        	
         	}
         	
         	
@@ -53,6 +54,7 @@ public class DiskController {
         }while(!pq.isEmpty());
         
         
+        System.out.print(sum / jobs.length);
 //        while(cnt++ < tempMax){
 //            
 //            pq.add(hash.get(cnt));
