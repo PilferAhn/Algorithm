@@ -32,12 +32,24 @@ public class FinePrime {
 		
 	}
 	
+	static int isPrime(String number) {
+		
+		for(int i = 2; i < 1000; i++) {
+			
+		}
+		
+		return 0;
+	}
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 		String number = "17";
 		String non = "";
 		recursive(number, number.length(), 0, non);
+		for(int i = 0; i < arr.size(); i ++) {
+//			int cnt = 
+		}
 		
 		
 	}

@@ -43,7 +43,7 @@ public class LongestNode {
 			for(int node : tree[temp]) {
 				if(check[node] == false) {
 					q.add(node);
-//					System.out.print(node + " ");
+					System.out.print(node + " ");
 					check[node] = true;
 					distance[node] += distance[temp] + 1;
 //					System.out.println(node + " 의 거리는 " + distance[node]);
@@ -62,7 +62,7 @@ public class LongestNode {
 			if(depth == max) answer ++;
 		}
 		
-		//System.out.print(answer);
+//		System.out.print(answer);
 		
 	}
 }
