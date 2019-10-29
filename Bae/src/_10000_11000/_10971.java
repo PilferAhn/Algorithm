@@ -2,27 +2,36 @@ package _10000_11000;
 import java.util.*;
 public class _10971 {
 	static boolean[] check = new boolean[1000000];
-	static int answer = 1000000;
-	public static void dfs(int[][] table, int node, int depth, int n, int value, int init) {
+	static int answer = 987654321;
+	static int init = 0;
+	static int n = 0;
+	public static void dfs(int[][] table, int node, int depth, int value) {
 		
-		if(depth >= n) {
+		if(depth == n ) {
 			
 			if(table[init][node] != 0) {
+				System.out.println("node is " + node);
 				answer = Math.min(answer, value + table[init][node]);
 				return ;
 			}
 			
 		}
 		
+		
+		
 		for(int i = 0; i < n; i++) {
-			
-			if(table[node][i] != 0 && !check[i]) {
+				
+			if(table[node][i] != 0 && check[i] == false) {
 				
 				check[i] = true;
-				dfs(table, i, depth+1, n, value + table[node][i], init);
+				
+				dfs(table, i, depth+1, value + table[node][i]);
+				
 				check[i] = false;
 			}
 		}
+		
+		
 		
 	}
 
@@ -30,7 +39,7 @@ public class _10971 {
 		// TODO Auto-generated method stub
 		
 		Scanner s = new Scanner(System.in);
-		int n = s.nextInt();
+		n = s.nextInt();
 		int[][] table = new int[n][n];
 		
 		for(int i = 0; i < n; i++)
@@ -41,11 +50,8 @@ public class _10971 {
 			}
 		
 		for(int i = 0; i < n; i++) {
-			
-			check[i] = true;
-			dfs(table, i, 0, n, 0,i);
-			check[i] = false;
-			
+			init = i;
+			dfs(table, i, 0, 0);
 		}
 		
 		System.out.print(answer);
