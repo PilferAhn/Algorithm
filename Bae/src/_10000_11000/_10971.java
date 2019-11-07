@@ -1,3 +1,6 @@
+// 항상 완전탐색으로 생각할 것. 
+// 
+
 package _10000_11000;
 import java.util.*;
 public class _10971 {
@@ -7,7 +10,9 @@ public class _10971 {
 	static int n = 0;
 	public static void dfs(int[][] table, int node, int depth, int value) {
 		
-		if(depth == n ) {
+		if(depth == n) {
+			
+			// 플로이드 알고리즘 찾아보기. 
 			
 			if(table[init][node] != 0) {
 				System.out.println("node is " + node);
